@@ -15,9 +15,36 @@
             <button class="btn btn-outline-info" type="submit" name="submit">Sign up</button>
         </form>
         </div>
+
+
+        <?php
+        if (isset($_GET["error"])){
+            if ($_GET["error"] == "emptyinput"){
+                echo "<p>Fill in all fields</p>";
+            }
+            elseif ($_GET["error"] == "invaliduid"){
+                echo "<p>Choose a proper username!</p>";
+            }
+            elseif ($_GET["error"] == "Invalidemail"){
+                echo "<p>User valid email</p>";
+            }
+            elseif ($_GET["error"] == "passwordsdontmatch"){
+                echo "<p>Passwords don't match! Try again</p>";
+            }
+            elseif ($_GET["error"] == "none"){
+                echo "<p>you have signed up</p>";
+            }
+            elseif ($_GET["error"] == "usernametaken"){
+                echo "<p>Try another using another username</p>";
+            }
+
+
+        }
+
+        ?>
+
+
     </section>
-
-
 
 <?php
     include_once 'footer.php';

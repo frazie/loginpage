@@ -1,11 +1,11 @@
 <?php
 $serverName="localhost";
-$dBUsername="root";
-$dBPassword="";
-$dBName="afri-eco";
+$dbUsername="root";
+$dbPassword="";
+$dbName="afri-eco";
 
 
-$connection = mysqli_connect($serverName,$dBUsername,$dBPassword,$dBName);
+$connection = mysqli_connect($serverName,$dbUsername,$dbPassword,$dbName);
 
 if (!$connection){
     die("Connection failed: ". mysqli_connect_error());
